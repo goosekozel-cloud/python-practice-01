@@ -19,31 +19,31 @@ while True:                                         # цикл, чтобы де�
             value = float(input("Введите значение: "))  # читаем исходное значение
             if choice == "1":                       # километры -> мили
                 result = value * 0.621371           # 1 км = 0.621371 мили
-                print(f"{value} км = {result} миль")
+                print(f"{value} км = {result:.2f} миль")
             elif choice == "2":                     # килограммы -> фунты
                 result = value * 2.20462            # 1 кг = 2.20462 фунта
-                print(f"{value} кг = {result} фунтов")
+                print(f"{value} кг = {result:.2f} фунтов")
             elif choice == "3":                     # Цельсий -> Фаренгейт
                 result = value * 9 / 5 + 32         # формула перевода температуры
-                print(f"{value} °C = {result} °F")
+                print(f"{value} °C = {result:.2f} °F")
             elif choice == "4":                     # метры -> футы
                 result = value * 3.28084            # 1 м = 3.28084 фута
-                print(f"{value} м = {result} футов")
+                print(f"{value} м = {result:.2f} футов")
             elif choice == "5":                     # литры -> галлоны
                 result = value * 0.264172           # 1 л = 0.264172 галлона
-                print(f"{value} л = {result} галлонов")
+                print(f"{value} л = {result:.2f} галлонов")
             elif choice == "6":                     # Цельсий -> Кельвин
                 result = value + 273.15             # K = C + 273.15
-                print(f"{value} °C = {result} K")
+                print(f"{value} °C = {result:.2f} K")
             elif choice == "7":                     # НОВОЕ: Фаренгейт -> Цельсий
                 result = (value - 32) * 5 / 9       # НОВОЕ: обратная формула температуры
-                print(f"{value} °F = {result} °C")
+                print(f"{value} °F = {result:.2f} °C")
             elif choice == "8":                     # НОВОЕ: сантиметры -> дюймы
                 result = value / 2.54               # НОВОЕ: 1 дюйм = 2.54 см
-                print(f"{value} см = {result} дюймов")
+                print(f"{value} см = {result:.2f} дюймов")
             else:                                   # НОВОЕ: часы -> минуты
                 result = value * 60                 # НОВОЕ: в 1 часе 60 минут
-                print(f"{value} ч = {result} минут")
+                print(f"{value} ч = {result:.2f} минут")
         except ValueError:                          # если ввели не число
             print("Ошибка: нужно ввести число.")
     else:                                           # если номер не из списка
